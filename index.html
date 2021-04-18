@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>Homepage</title>
-	
 
 	<style>
 		/*referencing*/
@@ -38,7 +37,7 @@
 			
 			background-color: #bd6a9a;
 			display: grid;
-			grid-template-columns: 300px 1fr ;
+			grid-template-columns: 250px 1fr ;
 			grid-template-areas: 
 			"header header"
 			"aside main"
@@ -56,7 +55,7 @@
 			text-align: center;
 		}
 
-/* 		aside{
+		aside{
 			position: fixed;
 			top:0;
 			bottom:0;
@@ -64,85 +63,17 @@
 			width:120px;
 			transition: all 1s;
 		}
- */
 
-		
-		@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,100);
 
-*{
-	font-family: 'Roboto', sans-serif;
-	font-weight:100;
-}
-html, body{height:100%}
-
-aside{
-	background: #1ABC9C;
-	position: fixed;
-	top:0;
-	bottom:0;
-	left:0;
-	width:45px;
-	transition: all 1s;
-}
-
-aside nav ul{
-	padding-left:0;
-}
-
-aside nav ul li{
-	display:flex;
-	align-items: center;
-	list-style-type: none;
-	padding: 10px;
-	cursor:pointer;
-}
-
-aside nav ul li span{
-	color:#fff;
-	padding-left:20px;
-	padding-right:20px;
-	opacity:0;
-	transition: all 1s;
-}
-
-aside:hover nav ul li span{
-	opacity: 1;
-	}
-
-aside:hover{
-	width:150px;
-}
-
-aside nav ul li:hover{
-	background-color: #16A085;
-}
-
-.material-icons{
-	color:#fff;
-}
-
-.avatar{
-	width:35px;
-	border-radius:50%;
-	background-color:#fff;
-	margin:5px;
-	margin-top:10px;
-	transition:all 1s;
-}
-
-aside:hover .avatar{
-	width:90px;
-	margin-left:30px;
-	margin-top:30px;
-}
 		footer{
 			width: 100%;
-			text-align: right;
+			text-align: center;
+			float: right;
 			
 		}
 
 		aside:hover{
-			width:300px;
+			width:200px;
 		}
 
 		/*#home{
@@ -162,8 +93,8 @@ aside:hover .avatar{
 
 
 			img{
-				width: 600px;
-				height:800px;
+				width: 400px;
+				height:600px;
 		}
 
 		a{
@@ -175,11 +106,16 @@ aside:hover .avatar{
 		ul{
 			font-size: 1em;
 
-/* 		}
+		}
 
 		.navf{
 			font-size: 2em;
-		} */
+		}
+
+		#gala{
+			float: right;
+			display: inline-block;
+		}
 
 
 
@@ -187,8 +123,8 @@ aside:hover .avatar{
 
 		.flip-card{
   			background-color: transparent;
-  			width: 600px;
-  			height: 800px;
+  			width: 400px;
+  			height: 600px;
  			border: 1px solid #f1f1f1;
   			perspective: 1000px; /* Remove this if you don't want the 3D effect */
 		}
@@ -228,8 +164,8 @@ aside:hover .avatar{
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
-  width: 600px;
-  height: 800px;
+  width:400px;
+  height:600px;
 }	
 
 
@@ -253,21 +189,25 @@ aside:hover .avatar{
 	<main> 
 		<p style="font-size: 2em">Corporate Invitations:</p>
 		<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img id="gala" src="template/businessmeet.jpeg" alt="E-card">
-    </div>
-    <div class="flip-card-back">
-    	<a href="myself.html">
-      <img id="gala" src="background/business.jpeg">
-  </a>
-    </div>	
-  </div>
-</div>
+  			<div class="flip-card-inner">
+   				<div class="flip-card-front">
+      				<img id="gala" src="template/businessmeet.jpeg" alt="E-card">
+      				<!-- <img id="gala" src="template/gala.jpeg"> -->
+   				</div>
+
+    			<div class="flip-card-back">
+    				<a href="myself.html">
+     					<img id="gala" src="background/business.jpeg">
+     					<!-- <img src="background/bluegold.jpeg"> -->
+  					</a>
+    			</div>	
+
+  			</div>
+		</div>
 
 
 		<p style="font-size: 2em">Formal Invitations:</p>
-		<div class="flip-card">
+		<!-- <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
       <img id="gala" src="template/gala.jpeg" alt="E-card">
@@ -278,27 +218,22 @@ aside:hover .avatar{
   </a>
     </div>
   </div>
-</div>
+</div> -->
 
 
 		<p style="font-size: 2em">Informal Invitations:</p>
 
 	</main>
 
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-	<aside>
-	<img class="avatar" src="http://pedrocacique.com/static/img/avatar_color.png" alt="avatar"/>
+	<aside> 
+	
 	<nav>
 		<ul>
-			<li><i class="material-icons">home</i><span>Home</span></li>
-			<li><i class="material-icons">pets</i><span>Pets</span></li>
-			<li><i class="material-icons">shopping_cart</i><span>Cart</span></li>
-			<li><i class="material-icons">room</i><span>Location</span></li>
-			<li><i class="material-icons">settings</i><span>Settings</span></li>
+			<li><!--  <img id="home" src="icons/home.png"> --><a href="">Home</a></li>
+			<li><a href="">About us</a></li>		
 		</ul>
 	</nav>
-</aside>
+	</aside>
 
 	<footer>
 		<nav class="navf">
@@ -312,3 +247,264 @@ aside:hover .avatar{
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+
+	<style>
+		body{
+			display: grid;
+			background-color: #bd6a9a;
+			grid-template-columns: 1fr;
+			grid-template-rows: 90vh 10vh;
+			margin: 0;
+
+
+		}
+
+		footer{
+
+			width: 100%;
+			height: 11vh;
+			margin: 0;
+			padding: 0;
+			background-color: white;
+
+		}
+
+		ul{
+			list-style-type: none;
+			margin: 10px;
+  			padding: 20px;
+  			overflow: hidden;
+  			float: left;
+		}
+
+		.circle{
+			background: #ff8869;
+    		border-radius: 50%;
+    		width: 600px;
+    		height: 600px;
+    		/*justify-content: center;*/
+    		align-self: center;
+    		align-items: center;
+		}
+		main{
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+		}
+
+		#ctext{
+			justify-content: center;
+		}
+	</style>
+</head>
+<body> 
+
+	<main>
+		<div class="circle">come-over!<div id="ctext"></div></div>
+	</main>
+
+
+	<footer>
+		 <ul> 
+		<span><div><a href="">Corporate</a>
+				<li>Meeting</li>
+				<li>Party</li>
+
+			</div>
+		</ul>
+
+		<ul>
+			<div><a href="">Formal</a>
+				<li>Graduation</li>
+				<li>Anniversary</li>
+			</div>
+		</ul>
+
+		<ul>
+			<div><a href="">Informal</a>
+				<li>Birthday</li>
+				<li>Baby shower</li>
+			</div>
+		</span>
+		</ul>
+
+
+	</footer>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+
+	<style>
+		body{
+			display: grid;
+			background-color: #bd6a9a;
+			grid-template-columns: 600px 1fr;
+			grid-template-rows: 90vh 10vh;
+			/*margin: 0;*/
+			grid-template-areas: 
+			"... main "
+			"footer footer"
+
+
+		}
+
+		footer{
+
+			grid-area: footer;
+			width: 100%;
+			height: 11vh;
+			margin: 0;
+			padding: 0;
+			background-color: white;
+
+		}
+
+		ul{
+			list-style-type: none;
+			margin: 10px;
+  			padding: 20px;
+  			overflow: hidden;
+  			float: left;
+		}
+
+		.circle{
+			justify-content: center;
+    		align-self: center;
+    		/*align-items: center;*/
+    		text-align: center;
+			background: #ff8869;
+    		border-radius: 50%;
+    		width: 600px;
+    		height: 600px;
+    		;
+    		
+    		
+		}
+		main{
+			grid-area: main;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+		}
+
+		#ctext{
+			color: white;
+			font:sifonn;
+			font-size: 4em;
+			text-transform: uppercase;
+			justify-content: center;
+			align-content: center;
+
+			line-height: 150px;
+		}
+		#text2{
+			color: white;
+			font:sifonn;
+			font-size: 2em ;
+			text-transform: uppercase;
+			line-height: 50px;
+		}
+
+
+
+	</style>
+</head>
+<body> 
+
+	<main>
+		<div class="circle">
+			<div id="ctext"><br>come-in</div><p id="text2"> customise your <br>online greeting cards(E-card)</p>
+		</div>
+	</main>
+
+
+	<footer>
+		 <ul> 
+		<span><div><a href="">Corporate</a>
+				<li>Meeting</li>
+				<li>Party</li>
+
+			</div>
+		</ul>
+
+		<ul>
+			<div><a href="">Formal</a>
+				<li>Graduation</li>
+				<li>Anniversary</li>
+			</div>
+		</ul>
+
+		<ul>
+			<div><a href="">Informal</a>
+				<li>Birthday</li>
+				<li>Baby shower</li>
+			</div>
+		</span>
+		</ul>
+
+
+	</footer>
+</body>
+</html> -->
+
+
