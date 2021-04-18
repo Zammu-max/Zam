@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Homepage</title>
+	
 
 	<style>
 		/*referencing*/
@@ -55,7 +56,7 @@
 			text-align: center;
 		}
 
-		aside{
+/* 		aside{
 			position: fixed;
 			top:0;
 			bottom:0;
@@ -63,8 +64,77 @@
 			width:120px;
 			transition: all 1s;
 		}
+ */
 
+		
+		@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,100);
 
+*{
+	font-family: 'Roboto', sans-serif;
+	font-weight:100;
+}
+html, body{height:100%}
+
+aside{
+	background: #1ABC9C;
+	position: fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	width:45px;
+	transition: all 1s;
+}
+
+aside nav ul{
+	padding-left:0;
+}
+
+aside nav ul li{
+	display:flex;
+	align-items: center;
+	list-style-type: none;
+	padding: 10px;
+	cursor:pointer;
+}
+
+aside nav ul li span{
+	color:#fff;
+	padding-left:20px;
+	padding-right:20px;
+	opacity:0;
+	transition: all 1s;
+}
+
+aside:hover nav ul li span{
+	opacity: 1;
+	}
+
+aside:hover{
+	width:150px;
+}
+
+aside nav ul li:hover{
+	background-color: #16A085;
+}
+
+.material-icons{
+	color:#fff;
+}
+
+.avatar{
+	width:35px;
+	border-radius:50%;
+	background-color:#fff;
+	margin:5px;
+	margin-top:10px;
+	transition:all 1s;
+}
+
+aside:hover .avatar{
+	width:90px;
+	margin-left:30px;
+	margin-top:30px;
+}
 		footer{
 			width: 100%;
 			text-align: right;
@@ -105,11 +175,11 @@
 		ul{
 			font-size: 1em;
 
-		}
+/* 		}
 
 		.navf{
 			font-size: 2em;
-		}
+		} */
 
 
 
