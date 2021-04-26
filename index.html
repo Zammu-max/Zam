@@ -1,110 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Homepage</title>
-
+	<title></title>
 	<style>
-		/*referencing*/
-		header{
-			grid-area: header;
-			background: #ff8869;
-		}
-
-		main{
-			grid-area: main;
-			background-color:#bd6a9a;
-		}
-
-		h1{
-			grid-area: hone;
-		}
-
-
-		aside{
-			grid-area: aside;
-			background-color: lightblue;
-
-		}
-
-		footer{
-			grid-area: footer;
-			background-color:#ff8869;
-		}
-
-
-		/*styling*/
 		body{
-			
-			background-color: #bd6a9a;
 			display: grid;
-			grid-template-columns: 250px 1fr ;
+			background-color: #bd6a9a;
+			grid-template-columns:100px 600px 1fr;
+			grid-template-rows: 90vh 60vh;
+			/*margin: 0;*/
 			grid-template-areas: 
-			"header header"
-			"aside main"
-			"footer footer" ;
+			"aside ... main"
+			"aside ... ..."
+			/*"... ... ..."*/
 
-			grid-template-rows:15vh 400vh 10vh;
 
-			/*padding: 0;*/
-			margin: 0;
+		}
+		body {
+			height: 90vh;
 		}
 
-		h1{
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-		}
-
-		aside{
+		/*footer{
 			position: fixed;
-			top:0;
-			bottom:0;
-			left:0;
-			width:120px;
-			transition: all 1s;
-		}
-
-
-		footer{
+			bottom: 0;
+			grid-area: footer;
 			width: 100%;
-			text-align: center;
-			float: right;
-			
-		}
+			height: 10vh;
+			margin: 0;
+			padding: 0;
+			background-color: white;
 
-		aside:hover{
-			width:200px;
-		}
-
-		/*#home{
-			width: 200px;
-			height: 200px;
-			position: fixed;
-			top:0;
-			bottom:0;
-			left:0;
-			transition: all 1s;
 		}*/
-
-		/*footer:hover :after{
-			width: 70%;
-			float:right;
-		}*/
-
-
-			img{
-				width: 400px;
-				height:600px;
-		}
-
-		a{
-			font-size: 2em;
-			color: black;
-
-		}
 
 		ul{
-			font-size: 1em;
+			/*list-style-type: none;*/
+			margin: 10px;
+  			padding: 20px;
+  			overflow: hidden;
+  			float: left;
+		}
+
+		.circle{
+			position: relative;
+			justify-content: center;
+    		align-self: center;
+    		/*align-items: center;*/
+    		text-align: center;
+			background: #ff8869;
+    		border-radius: 50%;
+    		width: 600px;
+    		height: 600px;
+    		;
+    		
+    		
+		}
+		main{
+			grid-area: main;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+		}
+
+		#ctext{
+			color: white;
+			font:sifonn;
+			font-size: 4em;
+			text-transform: uppercase;
+			justify-content: center;
+			align-content: center;
+
+			line-height: 150px;
+		}
+		#text2{
+			color: white;
+			font:sifonn;
+			font-size: 2em ;
+			text-transform: uppercase;
+			line-height: 50px;
+		}
+		#change {
+			position: relative;
+			top: 700px;
+		}
+				#right{
+			position: relative;
+			top: 0;
+			left: 0;
+			/*float: right;*/
 
 		}
 
@@ -115,6 +97,8 @@
 		#gala{
 			float: right;
 			display: inline-block;
+			width: 400px;
+			height: 600px;
 		}
 
 
@@ -159,17 +143,38 @@
   			color: black;
 }
 
-/* Style the back side */
-.flip-card-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-  width:400px;
-  height:600px;
-}	
+		/* Style the back side */
+		.flip-card-back {
+		  background-color: dodgerblue;
+		  color: white;
+		  transform: rotateY(180deg);
+		  width:400px;
+		  height:600px;
+		}	
+		nav ul li a:hover{
+			color: black;
+		}
+		aside{
+			grid-area: aside;
+			background-color: #ff8869;
 
+		}
+		aside{	
+			position: fixed;
+			top:0;
+			bottom:0;
+			left:0;
+			width:120px;
+			transition: all 0.2s;
+			font-size: 1em;
+			
+		}
+		aside:hover{
+			width:380px;
+			font-size: 2em;
+		}
 
-
+		
 
 
 
@@ -177,37 +182,38 @@
 	</style>
 </head>
 <body>
-<header>
-	<h1>Cardistry: Online E-cards customization</h1>
-</header>
-	<!-- <header> 
-		<a href="">Home</a>
-		<a href="">About us</a>
-		<a href=""></a>
-	</header> -->
-
-	<main> 
-		<p style="font-size: 2em">Corporate Invitations:</p>
+<main id="top">
+		<div class="circle" >
+			<div id="ctext"><br>come-in</div><p id="text2"> customise your <br>online greeting cards(E-card)</p>
+		</div>
+	</main>
+	<main class="ok"> 
+<div id="change">
+	
+		<p style="font-size: 2em" id="CI">Corporate Invitations:</p>
+		<a href="#top">Go To Top</a>
 		<div class="flip-card">
   			<div class="flip-card-inner">
    				<div class="flip-card-front">
       				<img id="gala" src="template/businessmeet.jpeg" alt="E-card">
-      				<!-- <img id="gala" src="template/gala.jpeg"> -->
+      				
    				</div>
-
-    			<div class="flip-card-back">
+   				<div class="flip-card-back">
     				<a href="myself.html">
      					<img id="gala" src="background/business.jpeg">
-     					<!-- <img src="background/bluegold.jpeg"> -->
+     					 
   					</a>
     			</div>	
 
   			</div>
+
 		</div>
 
+	
+		<p style="font-size: 2em" id="FI">Formal Invitations:</p>
 
-		<p style="font-size: 2em">Formal Invitations:</p>
-		<!-- <div class="flip-card">
+		<a href="#top">Go To Top</a>
+		 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
       <img id="gala" src="template/gala.jpeg" alt="E-card">
@@ -218,24 +224,43 @@
   </a>
     </div>
   </div>
-</div> -->
+</div> 
 
+		
+		<p style="font-size: 2em" id="II">Informal Invitations:</p>
 
-		<p style="font-size: 2em">Informal Invitations:</p>
+		<a href="#top">Go To Top</a>
+		 <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img id="gala" src="template/Babyshower.jpeg" alt="E-card">
+    </div>
+    <div class="flip-card-back">
+    	<a href="myself.html">
+      <img id="gala" src="background/babyshower.jpeg">
+  </a>
+</div>
+    </div>
+  </div>
+</div> 
 
 	</main>
-
 	<aside> 
 	
 	<nav>
 		<ul>
-			<li><!--  <img id="home" src="icons/home.png"> --><a href="">Home</a></li>
-			<li><a href="">About us</a></li>		
+			<li img id="home" src="icons/home.png"> <a href="">Home</a></li>
+			<li><a href="">Customize</a></li>
+			<li><a href="">About us</a></li>	
+			<li><a href="#CI">Corporate Invitations</a>
+			<li><a href="#FI">Formal Invitations</a>
+			<li><a href="#II">Informal Invitations</a>	
 		</ul>
+		
 	</nav>
 	</aside>
 
-	<footer>
+	<!-- <footer>
 		<nav class="navf">
 			<ul>Contact us
 				<li>
@@ -243,268 +268,8 @@
 				</li>
 			</ul>
 		</nav>
-	</footer>
+	</footer> -->
+
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-	<title>Homepage</title>
-
-	<style>
-		body{
-			display: grid;
-			background-color: #bd6a9a;
-			grid-template-columns: 1fr;
-			grid-template-rows: 90vh 10vh;
-			margin: 0;
-
-
-		}
-
-		footer{
-
-			width: 100%;
-			height: 11vh;
-			margin: 0;
-			padding: 0;
-			background-color: white;
-
-		}
-
-		ul{
-			list-style-type: none;
-			margin: 10px;
-  			padding: 20px;
-  			overflow: hidden;
-  			float: left;
-		}
-
-		.circle{
-			background: #ff8869;
-    		border-radius: 50%;
-    		width: 600px;
-    		height: 600px;
-    		/*justify-content: center;*/
-    		align-self: center;
-    		align-items: center;
-		}
-		main{
-			justify-content: center;
-			align-items: center;
-			align-content: center;
-		}
-
-		#ctext{
-			justify-content: center;
-		}
-	</style>
-</head>
-<body> 
-
-	<main>
-		<div class="circle">come-over!<div id="ctext"></div></div>
-	</main>
-
-
-	<footer>
-		 <ul> 
-		<span><div><a href="">Corporate</a>
-				<li>Meeting</li>
-				<li>Party</li>
-
-			</div>
-		</ul>
-
-		<ul>
-			<div><a href="">Formal</a>
-				<li>Graduation</li>
-				<li>Anniversary</li>
-			</div>
-		</ul>
-
-		<ul>
-			<div><a href="">Informal</a>
-				<li>Birthday</li>
-				<li>Baby shower</li>
-			</div>
-		</span>
-		</ul>
-
-
-	</footer>
-</body>
-</html> -->
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-	<title>Homepage</title>
-
-	<style>
-		body{
-			display: grid;
-			background-color: #bd6a9a;
-			grid-template-columns: 600px 1fr;
-			grid-template-rows: 90vh 10vh;
-			/*margin: 0;*/
-			grid-template-areas: 
-			"... main "
-			"footer footer"
-
-
-		}
-
-		footer{
-
-			grid-area: footer;
-			width: 100%;
-			height: 11vh;
-			margin: 0;
-			padding: 0;
-			background-color: white;
-
-		}
-
-		ul{
-			list-style-type: none;
-			margin: 10px;
-  			padding: 20px;
-  			overflow: hidden;
-  			float: left;
-		}
-
-		.circle{
-			justify-content: center;
-    		align-self: center;
-    		/*align-items: center;*/
-    		text-align: center;
-			background: #ff8869;
-    		border-radius: 50%;
-    		width: 600px;
-    		height: 600px;
-    		;
-    		
-    		
-		}
-		main{
-			grid-area: main;
-			justify-content: center;
-			align-items: center;
-			align-content: center;
-		}
-
-		#ctext{
-			color: white;
-			font:sifonn;
-			font-size: 4em;
-			text-transform: uppercase;
-			justify-content: center;
-			align-content: center;
-
-			line-height: 150px;
-		}
-		#text2{
-			color: white;
-			font:sifonn;
-			font-size: 2em ;
-			text-transform: uppercase;
-			line-height: 50px;
-		}
-
-
-
-	</style>
-</head>
-<body> 
-
-	<main>
-		<div class="circle">
-			<div id="ctext"><br>come-in</div><p id="text2"> customise your <br>online greeting cards(E-card)</p>
-		</div>
-	</main>
-
-
-	<footer>
-		 <ul> 
-		<span><div><a href="">Corporate</a>
-				<li>Meeting</li>
-				<li>Party</li>
-
-			</div>
-		</ul>
-
-		<ul>
-			<div><a href="">Formal</a>
-				<li>Graduation</li>
-				<li>Anniversary</li>
-			</div>
-		</ul>
-
-		<ul>
-			<div><a href="">Informal</a>
-				<li>Birthday</li>
-				<li>Baby shower</li>
-			</div>
-		</span>
-		</ul>
-
-
-	</footer>
-</body>
-</html> -->
-
-
