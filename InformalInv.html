@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<script type="text/javascript">
+	<script>
 		function save(){
 			var greetings = document.getElementById("greetings");
 			var occasion = document.getElementById("occasion");
@@ -73,85 +73,49 @@
 		}
 	}
 	</script>
-	<style type="text/css">
+	<style>
 		body{
 			background-color: #D5B895;
-		}
-		/*header{
-			width: 100%;
-			height: 1vh;
-		}*/
-
-		div{
-			display: block;
-
-		}
-
-		#container{
-			/*background-image:url("bluegold.jpeg");*/
-			background-size:100%;
-			/*background-repeat: no-repeat;*/
-			border: 1px, dashed, black;
-			height: 800px;
-			width: 600px;
-			float: right;
-			z-index: 1;
-			
-
-
-
-		}
-		/*img{
-			height: 700px;
-			width: 500px;
-			z-index: 0;
-			float: right;
-			
-			
-		}*/
-		#greetings1{
-			/*z-index: 1;*/
-			position: absolute;
-			top: 200px;
-			right:400px;
-			color: white;
-			text-align: center;
-		}
-		#occasion1{
-			/*z-index: 1;*/
-			position: absolute;
-			top: 250px;
-			right:400px;
-			color: white;
-		}
-		#date1{
-			/*z-index: 1;*/
-			position: absolute;
-			top: 300px;
-			right:400px;
-			color: white;
+			display: grid;
+			grid-template-columns: 200px 1fr;
+			grid-template-areas: 
+			"... header"
+			"aside main"
+			"aside footer" ;
+			grid-template-rows:10vh 80vh 10vh;
+			margin: 0 0;
+			padding: 0;
 		}
 
-		#venue1{
-			/*z-index: 1;*/
-			position: absolute;
-			top: 350px;
-			right:400px;
-			color: white;
+		header{
+			grid-area: header;
+			background-color: teal;
+
 		}
 
-		#details1{
-			/*z-index: 1;*/
-			position: absolute;
-			top: 400px;
-			right:400px;
-			color: white;
+		aside{
+			grid-area: aside;
+			background-color: teal;
+			height: 
+
 		}
+
+		main{
+			grid-area: main;
+			background-color: lightblue; 
+
+		}
+
+		footer{
+			grid-area: footer;
+			background-color: teal;
+		}
+
 
 
 		.bwep{
-			height: 100vh;	
-			background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url(image5.jpeg);
+			/*height: 100vh;*/	
+			/*background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url(image5.jpeg);*/
 			background-position: center;
 			background-size: cover;
 			overflow-x: hidden;
@@ -242,6 +206,70 @@
 			cursor: pointer;
 			margin-right: 0;
 		}
+
+		#container{
+			background-image:url("background/bluegold.jpeg");
+			justify-content: center;
+			align-content: center;
+			height: 800px;
+			width: 600px;
+			background-size:100%;
+			background-repeat: no-repeat;
+			border: 1px dashed white;
+			float: right;
+
+		}
+
+		#greetings1{
+			/*z-index: 1;*/
+			position: absolute;
+			top: 225px;
+			right:150px;
+			color: white;
+			text-align: left;
+			width: 300px;
+
+		}
+		#occasion1{
+			/*z-index: 1;*/
+			position: absolute;
+			top: 300px;
+			right:150px;
+			text-align: left;
+			color: white;
+			width: 300px;
+		}
+		#date1{
+			/*z-index: 1;*/
+			position: absolute;
+			top: 375px;
+			right:150px;
+			text-align: left;
+			color: white;
+			width: 300px;
+		}
+
+		#venue1{
+			/*z-index: 1;*/
+			position: absolute;
+			top: 475px;
+			right:150px;
+			text-align: left;
+			color: white;
+			width: 300px;
+		}
+
+		#details1{
+			/*z-index: 1;*/
+			position: absolute;
+			top: 525px;
+			right:150px;
+			text-align: left;
+			color: white;
+			width: 300px;
+		}
+
+
 		@media only screen and (max-width: 700px){
 			.vertical-bar{
 				display: none;
@@ -286,13 +314,16 @@
 			.close{
 				display: block;
 			}
-}
 
+			
+			
+			
+			
 	</style>
 </head>
 <body>
-	
-	<div class="bwep">
+	<header>
+		<div class="bwep">
 	<div class="nav-bar">
 			<!-- <div class="nav-logo">
 				<img src="C:/Users/Owner/Documents/bwep/assets/logo.jpg">
@@ -302,7 +333,7 @@
 
 				<ul>
 					<a href="Homepage.html"><li>HOME</li></a>
-					<a href="NavCustom.html"><li>CUSTOMIZE</li></a>
+					<a href="#"><li>CUSTOMIZE</li></a>
 					<a href="#"><li>ABOUT US</li></a>
 					<a href="Cards.html"><li>TYPES OF CARD</li></a>
 					<!-- <a href="#"><li>FORMAL</li></a>
@@ -312,13 +343,11 @@
 			</div>
 <img src="C:/Users/Owner/Documents/bwep/assets/menubar.png" class="menu-icon" onclick="showMenu()">
 		</div>
-	
+	</header>
 
-
-
-<div>
-	<!-- <img src="bluegold.jpeg"> -->
-	<div id="container">
+	<main>
+		<div id="bg">
+			<div id="container">
 		
 
 		<div id="greetings1" contenteditable="">Greetings</div>
@@ -328,9 +357,13 @@
 		<div id="details1" contenteditable="">Details</div>
 		
 	</div>
-</div>	
+		</div>
+	</main>
 
-	<div>
+
+
+	<aside>
+		<div>
 		<h1>Input Greetings</h1>
 		<input type="greetings" name="greetings" id="greetings" placeholder="Input Greetings">
 	</div><br>
@@ -362,13 +395,10 @@
 	<button onclick="save()">Save</button>
 	<button onclick="recall()">Recall</button>
 	<button id="move" onclick="fillin()">move</button>
-	<!-- <button onclick="fillin()">move</button> -->
-	<!-- <div id="greetings1" contenteditable="">Greetings</div>
-	<div id="" contenteditable="">Occasion</div>
-	<div id="date1" contenteditable="">Date</div>
-	<div id="venue1" contenteditable="">Venue</div>
-	<div id="details1" contenteditable="">Details</div> -->
+	</aside>
 
+
+	<footer></footer>
 
 </body>
 </html>
